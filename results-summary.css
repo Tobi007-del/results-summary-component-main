@@ -2,16 +2,19 @@
   box-sizing: border-box;
 }
 p{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 body{
-  padding: 13vh;
+  padding: 13dvh;
   overflow: hidden;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: hsl(0, 4%, 95%);
+}
+#media{
+  height: fit-content;
 }
 .student-result{
   width: 50vw; 
@@ -53,22 +56,25 @@ body{
 }
 #big-score{
   color: white;
-  font-size: 5.5vw;
+  font-size: 5.75vw;
+  font-weight: 800;
   margin: 0;
 }
 #small-score{
   color: rgba(255, 255, 255, 0.308);
-  font-size: 1.6vw;
+  font-size: 1.75vw;
+  font-weight: 800;
   margin: 0;
 }
 #comment{
   color: hsla(0, 0%, 100%, 0.914);
-  font-size: 2.7vw;
+  font-size: 2.6vw;
   margin: 0;
+  font-weight: 600;
 }
 #score-ranking{
   color: hsla(0, 0%, 100%, 0.545);
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   word-spacing: 0.075vw;
   letter-spacing: 0.05vw;
   margin: 1vw 2vw 2.5vw 2vw;
@@ -92,6 +98,7 @@ body{
   margin-top: 0.5vw;
   color: hsl(224, 30%, 27%);
   font-size: 2.2vw;
+  font-weight: 600;
 }
 .assessment-titles{
   position: relative;
@@ -99,6 +106,7 @@ body{
   left: 0.6vw;
   display: inline-flex;
   font-size: 1.4vw;
+  font-weight: 600;
   float: left;
 }
 .assessment-scores{
@@ -108,6 +116,7 @@ body{
   display: inline-flex;
   float: right;
   font-size: 1.4vw;
+  font-weight: 700;
 } 
 .assessment-total{
   position: relative;
@@ -116,6 +125,7 @@ body{
   display: inline-flex;
   float: right;
   font-size: 1.4vw;
+  font-weight: 700;
   color: rgba(0, 0, 0, 0.377);
 }
 .result-pane{
@@ -157,6 +167,7 @@ button{
   margin-top: 1.5vw;
   border-radius: 2vw;
   font-size: 1.45vw;
+  font-weight: 700;
   border: none;
 }
 button:hover{
@@ -170,13 +181,22 @@ button:hover{
 @media(max-width:450px){
   body{
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    overflow-y: auto;
     padding: 0;
     margin: 0;
   }
+  #media{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
   .student-result{
     width: 100vw; 
-    height: 100vh;
+    height: 100dvh;
     border-radius: 0;
     padding: 0;
   }
@@ -185,46 +205,46 @@ button:hover{
     float: none;
   }
   #result-score-panel{
-    height: 45vh;
+    height: 45dvh;
     border-radius: 0 0 8vw 8vw;
   }
   #result-header{
-    margin: 3.5vh 0 0 0;
-    font-size: 2.5vh;
+    margin: 3.5dvh 0 0 0;
+    font-size: 2.5dvh;
   }
   #score-circle{
     display: inline-flex;
     flex-flow: row wrap;
     justify-content: center;
-    height: 17.5vh;
-    width: 17.5vh;
-    border-radius: 8.75vh;
-    padding: 3.5vh;
-    margin-top: 3vh;
+    height: 17.5dvh;
+    width: 17.5dvh;
+    border-radius: 8.75dvh;
+    padding: 3.5dvh;
+    margin-top: 3dvh;
   }
   #link{
-    bottom: 12vh;
-    right: 0vh;
-    font-size: 25vh;
+    bottom: 12dvh;
+    right: 0dvh;
+    font-size: 25dvh;
   }
   #big-score{
     display: block;
-    font-size: 7.65vh;
+    font-size: 7.65dvh;
   }
   #small-score{
     display: block;
-    font-size: 2.1vh;
+    font-size: 2.1dvh;
   }
   #comment{
-    font-size: 3.4vh;
-    margin-top: 1vh;
+    font-size: 3.4dvh;
+    margin-top: 1dvh;
   }
   #score-ranking{
-    font-size: 2.1vh;
-    word-spacing: 0.075vh;
-    letter-spacing: 0.05vh;
-    line-height: 2.75vh;
-    margin: 1.3vh 10vw 2.5vh 10vw;
+    font-size: 2.1dvh;
+    word-spacing: 0.075dvh;
+    letter-spacing: 0.05dvh;
+    line-height: 2.75dvh;
+    margin: 1.3dvh 10vw 2.5dvh 10vw;
   }
   #result-summary-panel{
     padding: 7.5vw;
@@ -232,43 +252,43 @@ button:hover{
     box-shadow: none;
   }
   .icon{
-    top: 1.9vh;
-    width: 2.75vh;
-    height: 2.75vh;
+    top: 1.9dvh;
+    width: 2.75dvh;
+    height: 2.75dvh;
   }
   #summary-header{
-    margin-bottom: 3vh;
-    font-size: 2.65vh;
+    margin-bottom: 3dvh;
+    font-size: 2.65dvh;
   }
   .assessment-titles{
-    bottom: 0vh;
-    left: 1.5vh;
-    font-size: 2.15vh;
+    bottom: 0dvh;
+    left: 1.5dvh;
+    font-size: 2.15dvh;
   }
   .assessment-scores{
-    bottom: 0.1vh;
-    right: 7vh;
-    font-size: 2.15vh;
+    bottom: 0.1dvh;
+    right: 7dvh;
+    font-size: 2.15dvh;
   } 
   .assessment-total{
-    left: 1.65vh;
-    bottom: 0.1vh;
-    font-size: 2.15vh;
+    left: 1.65dvh;
+    bottom: 0.1dvh;
+    font-size: 2.15dvh;
     color: rgba(0, 0, 0, 0.377);
   }
   .result-pane{
     width: 85vw;
-    height: 7vh;
-    margin-bottom: 1.55vh;
-    border-radius: 1.5vh;
-    padding: 0 2vh 0 2vh;
+    height: 7dvh;
+    margin-bottom: 1.55dvh;
+    border-radius: 1.5dvh;
+    padding: 0 2dvh 0 2dvh;
   }
   button{
-    height: 7vh;
+    height: 7dvh;
     width: 85vw;
-    margin-top: 0.75vh;
-    border-radius: 3.5vh;
-    font-size: 2.25vh;
+    margin-top: 0.75dvh;
+    border-radius: 3.5dvh;
+    font-size: 2.25dvh;
   }
   button:hover{
     background:linear-gradient(hsl(224, 30%, 27%));
